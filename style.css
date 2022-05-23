@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:hsl(210, 46%, 95%);
+}
+
+.container{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  width: 1200px;
+  margin: 150px auto;
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px ;
+}
+.card{
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card header{
+  display: flex;
+  margin-bottom: 1.1rem;
+}
+
+.card header div{
+  margin-left: 20px;
+}
+
+.card header img{
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.card header p{
+  opacity: 0.5;
+}
+
+.card .B1{
+  opacity: 0.7;
+  margin-top: 15px;
+  line-height: 1.3rem;
+}
+
+.A1, .A2, .A4{
+  color: #fff;
+}
+
+.A1{
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1/span 2;
+  grid-row: 1;
+}
+
+.A2{
+  background-color: hsl(217, 19%, 35%);
+}
+
+.A4{
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2/ span 2;
+  grid-row: 2;
+}
+
+.A5{
+  grid-column: 4;
+  grid-row: 1/ span 2;
+  background-color: #fff;
+}
+
+.A3{
+  background-color: #fff;
+}
+
+@media(max-width: 375px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+  .card:nth-of-type(1) {
+      grid-column: 1;
+  }
+
+  .card:nth-of-type(5) {
+      grid-column: 1;
+      grid-row: 5;
+  }
+
+  .card:nth-of-type(4) {
+      grid-column: 1;
+      grid-row: 4
+  }
+}
